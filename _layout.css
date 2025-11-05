@@ -1,0 +1,53 @@
+/* ARQUIVO: assets/css/_layout.css */
+
+/* HEADER, NAV e MENU HAMBÚRGUER (Versão Mobile - Default) */
+header {
+    background-color: var(--cor-primaria);
+    padding: var(--espaco-sm);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o menu caia para a próxima linha */
+}
+
+/* Oculta o checkbox de controle (Técnica do Hambúrguer) */
+.menu-toggle {
+    display: none;
+}
+
+/* Oculta o menu principal por padrão (no mobile) */
+.main-menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Torna o menu visível quando o hambúrguer é clicado */
+.menu-toggle:checked ~ .main-menu {
+    max-height: 300px; /* Abre o menu */
+}
+
+/* Estilo do Menu */
+.main-menu ul {
+    list-style: none;
+}
+
+    .main-menu ul li a {
+        display: block;
+        padding: var(--espaco-sm);
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+/* FOOTER */
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: var(--espaco-md);
+}

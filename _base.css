@@ -1,0 +1,41 @@
+/* ARQUIVO: assets/css/_base.css - SEU DESIGN SYSTEM */
+
+:root {
+    /* Cores */
+    --cor-primaria: #002855; /* Azul Escuro */
+    --cor-secundaria: #FF7A00; /* Laranja (Ação/Destaque) */
+    --cor-neutra-claro: #F9F9F9; /* Fundo */
+    --cor-neutra-escuro: #333333; /* Texto */
+    /* Tipografia (Hierarquia) */
+    --fonte-cabecalho: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+    --tamanho-h1: 2.5rem;
+    --tamanho-h2: 1.8rem;
+    --tamanho-p: 1rem;
+    /* Espaçamento Modular */
+    --espaco-sm: 1rem; /* 16px */
+    --espaco-md: 1.5rem; /* 24px */
+    --espaco-lg: 2rem; /* 32px */
+}
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-neutra-claro);
+    color: var(--cor-neutra-escuro);
+}
+
+h1 {
+    font-size: var(--tamanho-h1);
+}
+
+h2 {
+    font-size: var(--tamanho-h2);
+    color: var(--cor-secundaria);
+}
