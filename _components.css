@@ -1,31 +1,101 @@
-/* ARQUIVO: assets/css/_components.css */
+/* ARQUIVO: assets/css/_components.css (Adicionar ao final) */
 
-/* BOT�ES (Com Estados Visuais: hover) */
-.btn-cta {
-    display: inline-block;
-    background-color: var(--cor-secundaria);
-    color: white;
-    padding: var(--espaco-sm) var(--espaco-md);
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DE FORMULÁRIOS */
+/* ---------------------------------------------------- */
+
+/* Estilo para o formulário principal */
+#cadastro-form {
+    background-color: white;
+    padding: var(--espaco-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: var(--espaco-lg);
 }
 
-    .btn-cta:hover, .btn-cta:focus {
-        background-color: #CC6200; /* Laranja um pouco mais escuro */
+/* Estilo para o agrupamento de campos */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: var(--espaco-md);
+    margin-bottom: var(--espaco-lg);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    padding: 0 var(--espaco-sm);
+}
+
+/* Estilo para cada grupo de label/input */
+#cadastro-form div {
+    margin-bottom: var(--espaco-sm);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    padding: var(--espaco-sm);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--tamanho-p);
+    transition: border-color 0.3s;
+}
+
+    input:focus, select:focus {
+        border-color: var(--cor-secundaria); /* Feedback visual no focus */
+        outline: none;
     }
 
-/* CARDS DE PROJETOS */
-.card-projeto {
-    border: 1px solid #ccc;
-    padding: var(--espaco-md);
-    border-radius: 8px;
-    margin-bottom: var(--espaco-md);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Usando Flexbox para alinhar conte�do dentro do card */
+/* ---------------------------------------------------- */
+/* BOTÕES DO FORMULÁRIO (Usando o btn-cta definido) */
+/* ---------------------------------------------------- */
+
+.form-actions {
+    margin-top: var(--espaco-lg);
+    /* Usando Flexbox para alinhar os botões */
     display: flex;
-    flex-direction: column;
+    gap: var(--espaco-sm);
+    justify-content: flex-start;
+}
+
+    /* Aplica o estilo de botão a todos os botões dentro de form-actions */
+    .form-actions button {
+        /* Herda o estilo do btn-cta, mas precisamos sobrescrever o background para o Limpar Formulário */
+        padding: var(--espaco-sm) var(--espaco-md);
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+/* Estilo específico para o botão Limpar Formulário (reset) */
+button[type="reset"] {
+    background-color: #aaa;
+    color: white;
+    border: none;
+}
+
+    button[type="reset"]:hover {
+        background-color: #888;
+    }
+
+
+
+.form-actions button[type="submit"] {
+    
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
 }
