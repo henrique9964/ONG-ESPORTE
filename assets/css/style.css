@@ -1,0 +1,5 @@
+/* ARQUIVO: assets/css/style.css */
+@import url('_base.css');
+@import url('_layout.css');
+@import url('_components.css');
+@import url('_responsive.css');

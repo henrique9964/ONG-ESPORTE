@@ -1,0 +1,48 @@
+/* ARQUIVO: assets/css/_responsive.css - GRID E BREAKPOINTS */
+
+/* CONTAINER para centralizar conteúdo */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaco-sm);
+}
+
+/* REGRA PARA TABLET E DESKTOP (Min-width: 768px) */
+@media (min-width: 768px) {
+
+    /* 1. LAYOUT DO GRID (Para Cartões de Projetos) */
+    .grid-12-col {
+        display: grid;
+        /* Cria 2 colunas de largura igual */
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaco-lg);
+    }
+
+    /* 2. NAVEGAÇÃO: Troca Menu Hambúrguer por Menu Horizontal */
+    .hamburguer-icon {
+        display: none !important; /* Esconde o ícone */
+    }
+
+    .main-menu {
+        max-height: none; /* Ignora a altura (sempre visível) */
+        width: auto;
+    }
+
+        .main-menu ul {
+            display: flex; /* Coloca os links lado a lado */
+        }
+
+            .main-menu ul li a {
+                border-bottom: none;
+            }
+}
+
+/* REGRA PARA DESKTOP GRANDE (Min-width: 1024px) */
+@media (min-width: 1024px) {
+
+    /* Grid de Cartões muda para 3 colunas */
+    .grid-12-col {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
